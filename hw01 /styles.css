@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 3fr 1fr 4fr 4fr 3fr 4fr;
+  grid-template-areas:
+  ". title ."
+  ". intro ."
+  "headline1 headline1 headline2"
+  "pic1 pic2 blog1"
+  "pic3 pic4 blog1"
+  "links links blog2"
+  "pic5 pic6 blog2";
+ min-height: 100vh;
+
+  row-gap: 10px;
+  column-gap: 10px;
+
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2{
+  font-size: 25px;
+}
+h1, h2 {
+  font-family: "Ubuntu";
+}
+
+p {
+  font-family: "Jesefin Sans";
+  font-size: 18px;
+}
+
+
+img {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+
+
+.title, .intro, .headline1, .headline2, .pic1, .pic2, .pic3, .pic4, .pic5, .pic6 .blog1, .blog2 .links {
+  border: solid 1px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  grid-area: title;
+  background: yellow;
+}
+
+.intro {
+  grid-area: intro;
+  background: blue;
+}
+
+.headline1 {
+  grid-area: headline1;
+  background: pink;
+}
+
+.headline2 {
+  grid-area: headline2;
+  background: pink;
+}
+
+.pic1 {
+  grid-area: pic1;
+  background: orange;
+}
+.pic2 {
+  grid-area: pic2;
+  background: orange;
+}
+.pic3 {
+  grid-area: pic3;
+  background: orange;
+}
+.pic4 {
+  grid-area: pic4;
+  background: orange;
+}
+.pic5 {
+  grid-area: pic5;
+  background: orange;
+}
+.pic6 {
+  grid-area: pic6;
+  background: orange;
+}
+
+.blog1 {
+  grid-area: blog1;
+  background: blue;
+}
+.blog2 {
+  grid-area: blog2;
+  background: blue;
+}
+
+.links {
+  grid-area: links;
+  background: green;
+}
