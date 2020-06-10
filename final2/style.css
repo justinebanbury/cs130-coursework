@@ -1,0 +1,577 @@
+body {
+    background-color: black;
+    font-family: proxima-nova, sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 5fr 3.5fr 4fr 4fr 4fr 4fr;
+   grid-template-areas:
+      "questionbox questionbox"
+      "selectionbox selectionbox"
+      "videosection1 textsection1"
+      "textsection2 videosection2"
+      "videosection3 textsection3"
+      "textsection4 videosection4";
+   min-height: 100vh;
+}
+
+/* /////////
+  INTRO BOX
+////////// */
+
+.questionbox {
+  grid-area: questionbox;
+  background-color: black;
+  height: 100vh;
+  overflow: scroll;
+}
+#introtextbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.questionbox p {
+  padding: none;
+  margin: none;
+  font-size: 200px;
+  font-weight: bold;
+  color: hotpink;
+}
+
+#text1{
+  padding-left: 10%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  color: black;
+  -webkit-text-stroke: 3px hotpink;
+}
+
+#text2 {
+  font-size: 56px;
+  padding-left: 44%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#text3 {
+  padding-left: 30%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.questionbox h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ///////////////
+    SPORTS Box
+/////////////// */
+
+#selectionbox {
+  grid-area: selectionbox;
+  /* background-color: white; */
+}
+/* #fff7f8 */
+
+.pictureboxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.picturebox {
+  height: 130px;
+  width: 15%;
+  margin: 5px;
+}
+
+.picturebox:hover {
+  border: solid white 2px;
+  opacity: 80%;
+}
+
+.image-div {
+  background-size: cover;
+  width: 100%;
+  height: 127px;
+}
+
+
+#selectionbox h6 {
+  font-size: 35px;
+  padding-left: 3%;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+/* //////////////
+    VIDEO BOXES
+////////////// */
+.videobox {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+#videos {
+  height: 46%;
+  width: 46%;
+  margin: 2%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.videos4 {
+  height: 300px;
+  width: 300px;
+  margin: 2%;
+  border-radius: 10px;
+}
+
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+.videobox1{
+  grid-area: videosection1;
+}
+.videobox2{
+  grid-area: videosection2;
+}
+.videobox3{
+  grid-area: videosection3;
+}
+.videobox4{
+  grid-area: videosection4;
+}
+
+
+
+/* //////////////
+  TEXT BOXES
+////////////// */
+.textbox {
+
+}
+
+h3{
+  font-size: 100px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 20%;
+  margin-bottom: 0px;
+  margin-left: 5%;
+}
+
+h4 {
+  font-size: 50px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10%;
+}
+
+h5 {
+  font-size: 100px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 20%;
+  margin-bottom: 0px;
+  margin-left: 5%;
+}
+/* ////////////
+  DEFAULT
+//////////// */
+
+h5.default {
+  -webkit-text-stroke: 3px hotpink;
+  color: black;
+}
+h4.default {
+  color: white;
+}
+h3.default {
+  color: white;
+}
+h6.default {
+  color: black;
+}
+#selectionbox.default {
+  background-color: white;
+}
+
+/* ////////////
+  NORTHWESTERN
+//////////// */
+h5.northwestern {
+  -webkit-text-stroke: 3px white;
+  color: #4E2A84;
+}
+h4.northwestern {
+  color: white;
+}
+h3.northwestern {
+  color: #4E2A84;
+}
+h6.northwestern {
+  color: white;
+}
+#selectionbox.northwestern {
+  background-color: #4E2A84;
+}
+
+/* ////////////
+  MICHIGAN
+//////////// */
+h5.michigan {
+  -webkit-text-stroke: 3px #FFCB05;
+  color: #00274C;
+}
+
+h4.michigan {
+  color: white;
+}
+h3.michigan {
+  color: #FFCB05;
+}
+h6.michigan {
+  color: #FFCB05;
+}
+#selectionbox.michigan {
+  background-color: #00274C;
+}
+
+
+/* ////////////
+  MARYLAND
+//////////// */
+h5.maryland {
+  -webkit-text-stroke: 3px #FFCD23;
+  color: #CF102D;
+}
+
+h4.maryland {
+  color: white;
+}
+h3.maryland {
+  color: #CF102D;
+}
+h6.maryland {
+  color: #FFCD23;
+}
+#selectionbox.maryland {
+  background-color: #CF102D;
+}
+
+/* ////////////
+  MICHIGAN STATE
+//////////// */
+h5.michiganstate {
+  -webkit-text-stroke: 3px white;
+  color: #18453B;
+}
+
+h4.michiganstate {
+  color: white;
+}
+h3.michiganstate {
+  color: #18453B;
+}
+h6.michiganstate {
+  color: white;
+}
+#selectionbox.michiganstate {
+  background-color: #18453B;
+}
+
+/* ////////////
+  INDIANA
+//////////// */
+h5.indiana {
+  -webkit-text-stroke: 3px #EDEBEB;
+  color: #990000;
+}
+
+h4.indiana {
+  color: #EDEBEB;
+}
+h3.indiana {
+  color: #990000;
+}
+h6.indiana {
+  color: white;
+}
+#selectionbox.indiana {
+  background-color: #990000;
+}
+
+
+/* ////////////
+  ILLINOIS
+//////////// */
+h5.illinois {
+  -webkit-text-stroke: 3px #E84A27;
+  color: #13294B;
+}
+
+h4.illinois {
+  color: white;
+}
+h3.illinois {
+  color: #E84A27;
+}
+h6.illinois {
+  color: #E84A27;
+}
+#selectionbox.illinois {
+  background-color: #13294B;
+}
+
+
+/* ////////////
+  NEBRASKA
+//////////// */
+h5.nebraska {
+  -webkit-text-stroke: 3px white;
+  color: #E41C38;
+}
+
+h4.nebraska {
+  color: white;
+}
+h3.nebraska {
+  color: #E41C38;
+}
+h6.nebraska {
+  color: white;
+}
+#selectionbox.nebraska {
+  background-color: #E41C38;
+}
+
+
+/* ////////////
+  MINNESOTA
+//////////// */
+h5.minnesota {
+  -webkit-text-stroke: 3px #FBB93C;
+  color: #862334;
+}
+
+h4.minnesota {
+  color: #862334;
+}
+h3.minnesota {
+  color: #FBB93C;
+}
+h6.minnesota {
+  color: #FBB93C;
+}
+#selectionbox.minnesota {
+  background-color: #862334;
+}
+
+/* ////////////
+  OHIO STATE
+//////////// */
+h5.ohiostate {
+  -webkit-text-stroke: 3px #B0B7BC;
+  color: #CE0F3D;
+}
+
+h4.ohiostate {
+  color: white;
+}
+h3.ohiostate {
+  color: #CE0F3D;
+}
+h6.ohiostate {
+  color: #CE0F3D;
+}
+#selectionbox.ohiostate {
+  background-color: #B0B7BC;
+}
+
+
+/* ////////////
+  RUTGERS
+//////////// */
+h5.rutgers {
+  -webkit-text-stroke: 3px #CC0033;
+  color: black;
+}
+
+h4.rutgers {
+  color: white;
+}
+h3.rutgers {
+  color: #CC0033;
+}
+h6.rutgers {
+  color: white;
+}
+#selectionbox.rutgers {
+  background-color: #CC0033;
+}
+
+
+/* ////////////
+  IOWA
+//////////// */
+h5.iowa {
+  -webkit-text-stroke: 3px #FCD116;
+  color: black;
+}
+
+h4.iowa {
+  color: white;
+}
+h3.iowa {
+  color: #FCD116;
+}
+h6.iowa {
+  color: black;
+}
+#selectionbox.iowa {
+  background-color: white;
+}
+
+
+/* ////////////
+  PURDUE
+//////////// */
+h5.purdue {
+  -webkit-text-stroke: 3px #CEB888;
+  color: black;
+}
+
+h4.purdue {
+  color: white;
+}
+h3.purdue {
+  color: #CEB888;
+}
+h6.purdue {
+  color: black;
+}
+#selectionbox.purdue {
+  background-color: #CEB888;
+}
+
+
+/* ////////////
+  PENN STATE
+//////////// */
+h5.pennstate {
+  -webkit-text-stroke: 3px white;
+  color: #002D62;
+}
+
+h4.pennstate {
+  color: white;
+}
+h3.pennstate {
+  color: #002D62;
+}
+h6.pennstate {
+  color: white;
+}
+#selectionbox.pennstate {
+  background-color: #002D62;
+}
+
+/* ////////////
+  WISCONSIN
+//////////// */
+h5.wisconsin {
+  -webkit-text-stroke: 3px white;
+  color: #C4012F;
+}
+
+h4.wisconsin {
+  color: white;
+}
+h3.wisconsin {
+  color: #C4012F;
+}
+h6.wisconsin {
+  color: white;
+}
+#selectionbox.wisconsin {
+  background-color: #C4012F;
+}
+
+
+
+#textbox1 {
+  grid-area: textsection1;
+}
+#textbox2 {
+  grid-area: textsection2;
+}
+#textbox3 {
+  grid-area: textsection3;
+}
+#textbox4 {
+  grid-area: textsection4;
+}
+
+
+/* //////////////
+SEARCH BAR CODE
+////////////// */
+
+.search {
+  position: relative;
+  display: flex;
+  padding-top: 300px;
+}
+
+.wrap{
+  width: 50%;
+  position: absolute;
+  top: 70%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+}
+
+select {
+  height: 65px;
+  width: 400px;
+  font-size: 30px;
+  border: solid 2px hotpink;
+  padding-bottom: 100px;
+}
