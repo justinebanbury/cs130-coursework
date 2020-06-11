@@ -15,14 +15,14 @@ body {
 .container {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 5fr 3.5fr 4fr 4fr 4fr 4fr;
+   grid-template-rows: auto auto auto auto auto auto;
    grid-template-areas:
       "questionbox questionbox"
       "selectionbox selectionbox"
       "videosection1 textsection1"
       "textsection2 videosection2"
       "videosection3 textsection3"
-      "textsection4 videosection4";
+      "template template";
    min-height: 100vh;
 }
 
@@ -35,6 +35,7 @@ body {
   background-color: black;
   height: 100vh;
   overflow: scroll;
+  margin-bottom: 30px;
 }
 #introtextbox {
   display: flex;
@@ -92,6 +93,7 @@ body {
 #selectionbox {
   grid-area: selectionbox;
   /* background-color: white; */
+  padding-bottom: 70px;
 }
 /* #fff7f8 */
 
@@ -140,6 +142,25 @@ body {
   align-items: center;
 }
 
+.jsvideobox {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  float: right;
+
+}
+
+.jstextbox {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  width: 50%;
+
+}
+
 
 #videos {
   height: 46%;
@@ -150,8 +171,8 @@ body {
 }
 
 .videos4 {
-  height: 300px;
-  width: 300px;
+  height: 260px;
+  width: 260px;
   margin: 2%;
   border-radius: 10px;
 }
@@ -166,17 +187,25 @@ iframe {
 
 .videobox1{
   grid-area: videosection1;
+  padding-bottom: 70px;
 }
 .videobox2{
   grid-area: videosection2;
+  padding-bottom: 70px;
 }
 .videobox3{
   grid-area: videosection3;
+  padding-bottom: 70px;
 }
-.videobox4{
+/* .videobox4{
   grid-area: videosection4;
-}
+} */
 
+.jstemplate{
+  grid-area: template;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
 /* //////////////
@@ -538,16 +567,19 @@ h6.wisconsin {
 
 #textbox1 {
   grid-area: textsection1;
+  padding-bottom: 70px;
 }
 #textbox2 {
   grid-area: textsection2;
+  padding-bottom: 70px;
 }
 #textbox3 {
   grid-area: textsection3;
+  padding-bottom: 70px;
 }
-#textbox4 {
-  grid-area: textsection4;
-}
+/* #textbox4 {
+  grid-area: template;
+} */
 
 
 /* //////////////

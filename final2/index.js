@@ -18,24 +18,32 @@ const picksport = (elem) => {
         .then(data => {
             console.log(data);
             const template = `
-              <section class="videobox" id="${id}">
+              <section id="${id}">
 
-                <div class="videos4">
-                <iframe src="${data[0].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="jsvideobox" >
+                  <div class="videos4">
+                  <iframe src="${data[0].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="videos4">
+                  <iframe src="${data[1].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="videos4">
+                  <iframe src="${data[2].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="videos4">
+                  <iframe src="${data[3].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                 </div>
-                <div class="videos4">
-                <iframe src="${data[1].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="videos4">
-                <iframe src="${data[2].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="videos4">
-                <iframe src="${data[3].embed_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                <div class="jstextbox">
+                  <h3 class="default"> Watch</h3>
+                  <h4 class="default"> Your favorite replays for NCAA Womens ${sport}</h4>
                 </div>
 
 
                 </section>`
-            document.querySelector('.videobox4').innerHTML += template;
+            document.querySelector('.jstemplate').innerHTML += template;
           });
 
   } else {
